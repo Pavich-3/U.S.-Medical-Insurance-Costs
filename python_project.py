@@ -34,7 +34,7 @@ class PatiensInfo:
         self.list_charges = list_charges
 
 
-#average age of the patients
+# average age of the patients
     def avg_age(self):
         total_age = 0
         for age in self.list_ages:
@@ -43,14 +43,14 @@ class PatiensInfo:
         return "The average age is " + str(round(average, 1)) + " years old."
 
 
-#how many smokers and non-smokers
+# how many smokers and non-smokers
     def coun_smoker(self):
         people_smok = self.list_smoker.count('yes')
         people_non_smok = self.list_smoker.count('no')
         return "People who smoker are: " + str(people_smok), "People who non-smoker are: " + str(people_non_smok)
 
 
-#where a majority of the individuals are from
+# where a majority of the individuals are from
     def maj_region(self):
         our_region = []
         for region in self.list_region:
@@ -122,7 +122,7 @@ class PatiensInfo:
 a = PatiensInfo(age, sex, bmi, children, smoker, region, charges)
 a.infl_child()
 
-#different costs between smokers vs. non-smokers.
+# different costs between smokers vs. non-smokers.
 def calcul_costs(file):
     list_smoker_costs = []
     list_non_smoker_costs = []
@@ -164,9 +164,3 @@ def avg_age_par(file):
 
     avg_par = total_age / len(parent_age)
     return "The average age is for someone who has at least one child: " + str(round(avg_par, 1))
-
-
-
-
-
-
