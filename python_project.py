@@ -39,7 +39,7 @@ class PatiensInfo:
         total_age = 0
         for age in self.list_ages:
             total_age += int(age)
-            average = total_age / len(self.list_ages)
+        average = total_age / len(self.list_ages)
         return "The average age is " + str(round(average, 1)) + " years old."
 
 
